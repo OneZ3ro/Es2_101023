@@ -11,13 +11,16 @@ public class FirstExercise {
         for (int i = 0; i < n; i++) {
             System.out.println("Inserisci la tua parola");
             String parola = input.nextLine();
-            withDuplicate.add(parola);
-            noDuplicate.add(parola);
+            boolean add = noDuplicate.add(parola);
+            if (!add) {
+                System.out.println("Duplicato: " + parola);
+                withDuplicate.add(parola);
+            }
         }
 
         System.out.print("Parole duplicate: [");
         for (String parola : withDuplicate) {
-            System.out.print(parola + ", " + parola + ", ");
+            System.out.print(parola + ", ");
         }
         System.out.println("]");
 

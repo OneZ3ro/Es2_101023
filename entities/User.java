@@ -1,5 +1,7 @@
 package entities;
 
+import java.util.HashMap;
+
 //public class User implements Comparable<User> {
 public class User {
     private String nome;
